@@ -8,10 +8,15 @@ public class Contacts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column
     private String name;
+    @Column
     private String sname1;
+    @Column
     private String sname2;
+    @Column
     private int phonenumber;
+    @Column
     private String email;
 
     public int getId() {
