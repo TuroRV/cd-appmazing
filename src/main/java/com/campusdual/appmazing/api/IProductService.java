@@ -5,9 +5,9 @@ import com.campusdual.appmazing.model.dto.ProductDTO;
 import java.util.List;
 
 public interface IProductService {
-    public ProductDTO queryProduct (ProductDTO Product);
+    public ProductDTO queryProduct (ProductDTO ProductDTO);
     List<ProductDTO> queryAllProducts();
-    int insertProduct (ProductDTO product);
-    int updateProduct(ProductDTO product);
-    int deleteProduct(ProductDTO product);
+    int insertProduct (ProductDTO productDTO);
+    int updateProduct(ProductDTO productDTO);
+    int deleteProduct(ProductDTO productDTO);
 }
