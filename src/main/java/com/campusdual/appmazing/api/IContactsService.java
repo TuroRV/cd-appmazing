@@ -7,9 +7,9 @@ import com.campusdual.appmazing.model.dto.ContactsDTO;
 import java.util.List;
 
 public interface IContactsService {
-    public ContactsDTO queryContacts (ContactsDTO Contacts);
+    public ContactsDTO queryContacts (ContactsDTO ContactsDTO);
     List<ContactsDTO> queryAllContacts();
-    int insertContacts (ContactsDTO contacts);
-    int updateContacts(ContactsDTO contacts);
-    int deleteContacts(ContactsDTO contacts);
+    int insertContacts (ContactsDTO contactsDTO);
+    int updateContacts(ContactsDTO contactsDTO);
+    int deleteContacts(ContactsDTO contactsDTO);
 }
