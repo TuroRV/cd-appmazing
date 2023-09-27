@@ -7,9 +7,12 @@ import com.campusdual.appmazing.model.dto.ContactsDTO;
 import com.campusdual.appmazing.model.dto.dtomapper.ContactsMapper;
 import com.campusdual.appmazing.model.dto.dtomapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service("ContactsService")
+@Lazy
 public class ContactsService implements IContactsService {
 
     @Autowired
