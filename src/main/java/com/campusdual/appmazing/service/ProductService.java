@@ -45,7 +45,7 @@ public class ProductService implements IProductService {
     public int deleteProduct(ProductDTO productDTO) {
         int id = productDTO.getId();
         Product product = ProductMapper.INSTANCE.toEntity(productDTO);
-        productDao.delete(product);
+        this.productDao.delete(product);
         return id;
     }
 }
