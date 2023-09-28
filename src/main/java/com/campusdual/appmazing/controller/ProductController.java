@@ -1,14 +1,18 @@
 package com.campusdual.appmazing.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-@GetMapping
+    @GetMapping
     public String testController(){
         return "Product Controller works";
     }
+
+    @PostMapping
+    public String testControllerBody(@RequestBody String name){
+        return "Product Controller works, " + name + "!";
+    }
+
 }
