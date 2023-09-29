@@ -30,6 +30,10 @@ public class ContactsController {
         return this.contactsService.insertContacts(contacts);
     }
     @PutMapping(value = "/update")
+    public int updateProduct (@RequestBody ContactsDTO contacts){
+        return this.contactsService.updateContacts(contacts);
+    }
+    @DeleteMapping(value = "/delete")
     public int updateContacts (@RequestBody ContactsDTO contacts){
         return this.contactsService.deleteContacts(contacts);
     }
