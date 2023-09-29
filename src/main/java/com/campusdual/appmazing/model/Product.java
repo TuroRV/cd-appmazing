@@ -1,5 +1,8 @@
 package com.campusdual.appmazing.model;
 
+import com.campusdual.appmazing.model.dto.CategoryDTO;
+import org.hibernate.annotations.ManyToAny;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -20,9 +23,21 @@ public class Product {
     private boolean active;
     @Column
     private Date date_added;
+    @ManyToOne
+    @JoinColumn(name = "category")
+    private Category category;
+
 
     public int getId() {
         return id;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public void setId(int id) {
